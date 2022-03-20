@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html manifest="site.manifest">
+<head>
+	
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+	<style>
+  .banniere2{
+  background-position:;
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:700px;
+}
+
+.bouton{
+  
+  display: block;
+    margin-left: auto;
+    margin-right: auto 
+  
+}
+
+.hauteur{
+  height:500px;
+  
+}
+
+	#btn{
+		border: 2px solid black;
+		color: white;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		font-size: 20px;
+		font-family: sans-serif;
+		transition: all .5s;
+		}
+
+	#btn-5{
+		border: 2px solid black;
+		color: white;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		font-size: 20px;
+		font-family: sans-serif;
+		transition: all .5s;
+		}
+
+#btn-4{
+		border: 2px solid black;
+		color: red;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		font-size: 20px;
+		font-family: sans-serif;
+		transition: all .5s;
+		}
+
+	#btn:before{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top:  0%;
+			left: 0%;
+			background: white;
+			transition: all .5s;
+			z-index: -1;
+			
+		}
+	#btn:after{
+			width: 100%;
+			height: 100%;
+			content: '';
+			position: absolute;
+			background: purple;
+			transition: all .5s;
+			z-index: -1;			
+	}
+
+	#btn:hover{
+		color: green;
+	}
+	#btn:hover:before{			
+			transform: rotateX(90deg);
+	}
+	#btn:hover:after{
+			transform: rotateY(90deg);
+	}
+
+	#btn1{
+		border: 2px solid black;
+		color: black;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		font-size: 20px;
+		font-family: sans-serif;
+		transition: all .5s;
+		}
+
+	#btn1:before{
+			width: 100%;
+			height: 100%;
+			content: '';
+			margin: auto;
+			position: absolute;
+			top:  -100%;
+			left: -100%;
+			background: #212121;
+			transition: all .5s;
+			z-index: -1;
+			
+		}
+	
+	#btn1:hover{
+		color: white;
+	}
+	#btn1:hover:before{			
+			top: 0;
+			left: 0;
+
+	}
+
+.btn-5 {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.btn-5:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+
+.btn-2 {
+    letter-spacing: 0;
+}
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 5px;
+}
+
+.btn-2:after,
+.btn-2:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.btn-2:hover:after,
+.btn-2:hover:before {
+  backface-visibility: hidden;
+  border-color: red;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.btn-2:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: #24252a;
+  color: #fff;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+.logo {
+  order: 1;
+  font-size: 1.8rem;
+}
+
+.menu-items li,
+button {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+button {
+  padding: 8px 19px;
+  margin-right: 20px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all ease-in-out 0s;
+}
+
+button:hover a {
+  color: #0088a9;
+}
+
+button:hover {
+  background: #fff;
+  color: #0088a9;
+}
+
+.navbar a:hover {
+  color: #0088a9;
+}
+
+@media (max-width: 768px) {
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #24252a;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 40px;
+    transition: transform 0.5s ease-in-out;
+    overflow: scroll;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  button {
+    width: fit-content;
+    margin-left: 1rem;
+  }
+
+  .logo {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 1.7rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+  }
+}
+
+.surprise{
+  width:1100px;
+  height:450px;
+  border:1px solid black;
+}
+
+.middle{
+  height:500px;
+  width:1100px;
+  margin:auto;
+  border-bottom:2px green solid;
+}
+
+.video{
+  height:500px;
+  
+}
+
+.photo{
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+
+.photo2{
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+	</style>
+</head>
+<body>
+	<section class="banniere h-12 bg-black  ">
+      <nav class="navbar">
+      <div class="navbar-container container">
+        <input type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Category</a></li>
+          <button><a href="#">Contact</a></button>
+        </ul>
+        <h1 class="logo">LOVNI</h1>
+      </div>
+    </nav>
+  
+</section>
+
+<section style='background-image:url("https://wallpapercave.com/wp/wp1950378.jpg")' class="banniere2 h-96 bg-gray-500 ">
+  
+  
+  
+</section>
+
+<section  class=" middle ">
+  
+ <div class="mx-auto w-96 h-72 -mt-4 z-40 bg-gray-800 surprise ">
+    
+     <h1 class="text-white text-center mt-2 text-9xl font-bold">WELCOME TO LOVNI </h1>
+   
+   <p class="text-white text-center mt-4 text-4xl mt-14"> "One of the penalties for refusing to participate in politics is that you end up being governed by your inferiors."
+</p>
+   
+   <h1 class="text-red-600 text-center mt-2 text-5xl font-bold">PLATO </h1>
+    
+  </div>
+  
+</section>
+
+<section class="">
+  
+  <h1 class="font-bold text-3xl p-8 mb-10 text-center text-6xl mt-10 uppercase">our professionals and their articles</h1>
+  
+  <div class="grid grid-cols-4 gap-8 p-8">
+    
+    <div class="border h-96  rounded hauteur">
+       
+      <div style="background-image:url('https://image.noelshack.com/fichiers/2022/08/2/1645560303-photo.jpeg')" class="rounded-full border mx-auto h-44 w-44 mt-4 mb-2 photo">
+      
+      
+    </div>
+      
+      <p class="text-center">OMAR ALMOCTAR </p>
+      <p class="font-bold text-center"> COULIBALY </p>
+      
+      <p class="font-bold text-center mt-10">
+        PARTIE EXTREME GAUCHE
+      </p>
+      
+      <a id="btn" href="https://codepen.io/NOWHERE22/full/mdqKJjx" class="inline-block bg-black h-8 w-36 mt-20 rounded text-white text-center bouton">
+        ARTICLE
+      </a>
+      
+    </div>
+    
+        <div class="border h-96  rounded hauteur">
+       
+      <div style="background-image:url('https://image.noelshack.com/fichiers/2022/08/3/1645598106-20220222-215843.jpg')" class="rounded-full border mx-auto h-44 w-44 mt-4 mb-2 photo">
+      
+      
+    </div>
+      
+      <p class="text-center">AKRAM  </p>
+      <p class="font-bold text-center"> M'ZE AHAMED </p>
+      
+      <p class="font-bold text-center mt-10">
+        PARTIE EXTREME GAUCHE
+      </p>
+      
+      <a id="btn1" href="https://codepen.io/NOWHERE22/full/bGYPrRe" class="inline-block  h-8 w-36 mt-20 rounded text-white text-center bouton">
+        ARTICLE
+      </a>
+      
+    </div>
+    
+        <div  class="border h-96  rounded hauteur">
+       
+      <div style="background-image:url('https://image.noelshack.com/fichiers/2022/08/2/1645559845-photo-arthur.jpeg')" class="rounded-full border mx-auto h-44 w-44 mt-4 mb-2 photo">
+      
+      
+    </div>
+      
+      <p class="text-center">ARTHUR </p>
+      <p class="font-bold text-center">BROUCHOND </p>
+      
+      <p class="font-bold text-center mt-10">
+        PARTIE EXTREME GAUCHE
+      </p>
+      
+      <a id="btn-5" href="https://codepen.io/NOWHERE22/full/ZEadJya" class="inline-block bg-gray-400 h-8 w-36 mt-20 rounded text-white text-center bouton btn-5">
+        ARTICLE
+      </a>
+      
+    </div>
+    
+        <div class="border h-96  rounded hauteur">
+       
+      <div style='background-image:url("https://image.noelshack.com/fichiers/2022/08/2/1645560971-img-1044.jpg")' class="rounded-full border mx-auto h-44 w-44 mt-4 mb-2 photo2">
+      
+      
+    </div>
+      
+      <p class="text-center">LUCAS </p>
+      <p class="font-bold text-center"> RINKENBACH </p>
+      
+      <p class="font-bold text-center mt-10">
+        PARTIE EXTREME GAUCHE
+      </p>
+      
+      <a id="btn-2" href="https://codepen.io/NOWHERE22/full/zYPVdzj" class="inline-block bg-black h-8 w-36 mt-20 rounded text-white text-center bouton btn-2">
+        ARTICLE
+      </a>
+      
+    </div>
+    
+  </div>
+  
+  
+  
+</section>
+
+<section class="video">
+  
+  <h1 class="font bold text-center text-7xl mt-4 ">THE GREAT DEBATE </h1>
+  
+  
+  <iframe class="mx-auto mt-20" width="800" height="500" src="https://www.youtube.com/embed/5iHp_R3Wq_k?list=RD5iHp_R3Wq_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+</section>
+</body>
+
+</html>
